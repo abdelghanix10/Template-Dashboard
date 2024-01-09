@@ -1,6 +1,4 @@
-/* Start Box */.c-red {
-    color: #f60017;
-}
+/* Start Box */
 .d-flex {
     display: flex;
 }
@@ -29,9 +27,6 @@
 .bg-eee {
     background-color: #eee;
 }
-.c-black {
-    color: black;
-}
 .c-blue {
     color: #2878fc;
 }
@@ -41,7 +36,9 @@
 .c-green {
     color: #43c662;
 }
-
+.c-red {
+    color: #f60017;
+}
 /* End Color */
 /* Start */
 .border-none {
