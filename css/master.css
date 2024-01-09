@@ -1,0 +1,442 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.page {
+    background-color: #F1F5F9;
+    min-height: 100vh;
+}
+
+.titleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.titleSection h2 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #000;
+}
+
+.titleSection p {
+    font-size: 14px;
+    color: #666;
+}
+/* Start Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+    background-color: white;
+    min-height: 100vh;
+    color: black;
+    width: 250px;
+    box-shadow: 0 0 20px #ddd;
+}
+
+.sidebar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+.sidebar .logo::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+    height: 2px;
+    background-color: #000;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sidebar .logo::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 4px solid white;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #000;
+}
+
+.sidebar ul li a:hover {
+    background-color: #f6f6f6;
+}
+
+.sidebar ul li a.active {
+    background-color: #f6f6f6;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        font-size: 12px;
+        width: 50px;
+        padding: 10px 8px;
+    }
+    .sidebar .logo::after,
+    .sidebar .logo::before {
+        display: none;
+    }
+
+    .sidebar ul li a {
+        padding: 10px 0;
+        justify-content: center;
+    }
+    .sidebar ul li a span {
+        display: none;
+    }
+
+}
+/* End Sidebar */
+/* Start Content */
+.content {
+    width: 100%;
+}
+/* End Content */
+/* Start Head */
+.head {
+    width: 100%;
+    padding: 15px;
+    align-items: center;
+}
+
+.head input {
+    outline: none;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 200px;
+    font-size: 14px;
+    padding-left: 30px;
+}
+
+.head .search i {
+    position: relative;
+    left: 30px;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 14px;
+}
+/* End Head */
+/* Sart Main */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main .title h1 {
+    margin-bottom: 10px;
+}
+
+.main .title h1::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background-image: linear-gradient(to right, #000, #f6f6f6);
+    bottom: -10px;
+    left: 0%;
+}
+
+.main .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.main .content .quick form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .content .quick form input,
+.main .content .quick form textarea {
+    outline: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: none;
+    background-color: #f6f6f6;
+}
+
+.main .content .quick form input[type="submit"] {
+    background-color: #0075ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+    align-self: flex-end;
+    padding: 5px 10px;
+}
+
+.main .content .quick form input[type="submit"]:hover {
+    background-color: #0d69d5;
+}
+
+.main .content .targets {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .content .targets .target {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 6px;
+}
+
+.main .content .targets .target .icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.main .content .targets .target .icon-1 {
+    color: #2878fc;
+    background-color: #d4e4fe;
+}
+
+.main .content .targets .target .icon-2 {
+    color: #ffb800;
+    background-color: #feebd0;
+}
+
+.main .content .targets .target .icon-3 {
+    color: #ff0000;
+    background-color: #ffd6d6;
+}
+
+.main .content .targets .target .details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.main .content .targets .target .details .title {
+    font-size: 14px;
+    color: #666;
+}
+
+.main .content .targets .target .details .number {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main .content .targets .target .progress {
+    width: 100%;
+    height: 4px;
+    position: relative;
+    border-radius: 6px;
+    background-color: #f6f6f6;
+}
+
+.main .content .targets .target .progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.main .content .targets .target .progress span[data-progress="80%"] {
+    width: 80%;
+    background-color: #0075ff;
+}
+
+.main .content .targets .target .progress span[data-progress="50%"] {
+    width: 50%;
+    background-color: #ffb800;
+}
+
+.main .content .targets .target .progress span[data-progress="75%"] {
+    width: 75%;
+    background-color: #ff0000;
+}
+
+.main .content .targets .target .progress span::after {
+    content: attr(data-progress);
+    position: absolute;
+    top: -40px;
+    right: -17px;
+    width: 24px;
+    height: 20px;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.main .content .targets .target .progress span::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #333 transparent transparent transparent;
+    top: -16px;
+    right: -6px;
+}
+
+.main .content .targets .target .progress span[data-progress="80%"]::after {
+    background-color: #0075ff;
+}
+
+.main .content .targets .target .progress span[data-progress="50%"]::after {
+    background-color: #ffb800;
+}
+
+.main .content .targets .target .progress span[data-progress="75%"]::after {
+    background-color: #ff0000;
+}
+
+.main .content .targets .target .progress span[data-progress="80%"]::before {
+    border-color: #0075ff transparent transparent transparent;
+}
+
+.main .content .targets .target .progress span[data-progress="75%"]::before {
+    border-color: #ff0000 transparent transparent transparent;
+}
+
+.main .content .targets .target .progress span[data-progress="50%"]::before {
+    border-color: #ffb800 transparent transparent transparent;
+}
+
+.main .content .statistics .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main .content .statistics .stats .box {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 3px solid #f6f6f6;
+    transition: 0.3s;
+    width: calc(50% - 10px);
+}
+
+.main .content .statistics .stats .box:hover {
+    box-shadow: 0 0 10px #ddd;
+}
+.main .content .statistics .stats .box .number {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.main .content .statistics .stats .box .title {
+    color: #666;
+    font-size: 14px;
+}
+
+.main .content .news .box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main .content .news .box .newsBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.main .content .news .box .newsBox:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.main .content .news .box .newsBox .img {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.main .content .news .box .newsBox img {
+    width: 100%;
+}
+
+.main .content .news .box .newsBox .text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .content .news .box .newsBox .text h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.main .content .news .box .newsBox .text p {
+    color: #666;
+}
+
+.main .content .news .box .newsBox .date {
+    color: #666;
+    font-size: 14px;
+    background-color: #ddd;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+/* End Main */
