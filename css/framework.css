@@ -1,1 +1,56 @@
+/* Start Box */.c-red {
+    color: #f60017;
+}
+.d-flex {
+    display: flex;
+}
+.between-flex {
+    justify-content: space-between;
+}
+/* End Box */
+/* Start Margin and Padding */
+.m-auto {
+    margin: auto;
+}
+.p-20 {
+    padding: 20px;
+}
+.m-20 {
+    margin: 20px;
+}
+.p-relative {
+    position: relative;
+}
+/* End Margin and Padding */
+/* Start Color */
+.bg-white {
+    background-color: white;
+}
+.bg-eee {
+    background-color: #eee;
+}
+.c-black {
+    color: black;
+}
+.c-blue {
+    color: #2878fc;
+}
+.c-yellow {
+    color: #ef9b25;
+}
+.c-green {
+    color: #43c662;
+}
 
+/* End Color */
+/* Start */
+.border-none {
+    border: none;
+}
+.rad-6 {
+    border-radius: 6px;
+}
+.box-shadow {
+    box-shadow: 0 0 10px #ddd;
+}
+/* End */
