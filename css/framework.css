@@ -27,6 +27,9 @@
 .bg-eee {
     background-color: #eee;
 }
+.c-black {
+    color: black;
+}
 .c-blue {
     color: #2878fc;
 }
@@ -38,6 +41,22 @@
 }
 .c-red {
     color: #f60017;
+}
+
+.bg-black {
+    background-color: black;
+}
+.bg-blue {
+    background-color: #2878fc;
+}
+.bg-yellow {
+    background-color: #ef9b25;
+}
+.bg-green {
+    background-color: #43c662;
+}
+.bg-red {
+    background-color: #f60017;
 }
 /* End Color */
 /* Start */
