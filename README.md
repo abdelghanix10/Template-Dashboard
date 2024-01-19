@@ -1,5 +1,4 @@
-# Template HTML-CSS
-
+# Template Dashboard
 Template A responsive HTML5 website template built with CSS and JavaScript. \
 
 ## Overview
