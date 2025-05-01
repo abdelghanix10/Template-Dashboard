@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Dashboard</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page d-flex">
+        <div class="sidebar bg-white p-relative">
+            <h3 class="logo">AB</h3>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html" class="active">
+                        <i class="fa fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fa fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <i class="fa fa-list"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html">
+                        <i class="fa fa-graduation-cap"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="friends.html">
+                        <i class="fa fa-user-friends"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fa fa-file"></i>
+                        <span>Files</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="plans.html">
+                        <i class="fa fa-credit-card"></i>
+                        <span>Plans</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="conten">
+            <div class="head bg-white d-flex between-flex">
+                <div class="search p-relative">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Type A Keyword">
+                </div>
+                <div class="icons d-flex align-center">
+                    <span class="notification p-relative">
+                        <i class="fa fa-bell"></i>
+                    </span>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+                        alt=""
+                        style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+
+            <div class="main p-20">
+                <div class="title">
+                    <h1 class="p-relative">Settings</h1>
+                </div>
+                <div class="content">
+                    <!-- General Settings -->
+                    <div class="general-settings bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>General Settings</h2>
+                            <p>Control Your Dashboard Preferences</p>
+                        </div>
+                        <div class="settings-form">
+                            <div class="setting-item">
+                                <label for="site-name">Site Name</label>
+                                <input type="text" id="site-name" value="Dashboard" placeholder="Enter site name">
+                            </div>
+                            <div class="setting-item">
+                                <label for="language">Language</label>
+                                <select id="language">
+                                    <option value="en">English</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="fr">French</option>
+                                    <option value="es">Spanish</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label for="timezone">Timezone</label>
+                                <select id="timezone">
+                                    <option value="UTC">UTC</option>
+                                    <option value="EST">Eastern Time</option>
+                                    <option value="PST">Pacific Time</option>
+                                    <option value="GMT">Greenwich Mean Time</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Settings -->
+                    <div class="security-settings bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>Security Settings</h2>
+                            <p>Manage Your Account Security</p>
+                        </div>
+                        <div class="settings-form">
+                            <div class="setting-item">
+                                <label>Two-Factor Authentication</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="2fa-toggle" checked>
+                                    <label for="2fa-toggle" class="toggle-label">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-text">Enabled</span>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <label>Login Notifications</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="login-notifications">
+                                    <label for="login-notifications" class="toggle-label">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-text">Disabled</span>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <button class="btn-primary">Change Password</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Privacy Settings -->
+                    <div class="privacy-settings bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>Privacy Settings</h2>
+                            <p>Control Your Privacy Preferences</p>
+                        </div>
+                        <div class="settings-form">
+                            <div class="setting-item">
+                                <label>Profile Visibility</label>
+                                <div class="radio-group">
+                                    <label class="radio-item">
+                                        <input type="radio" name="profile-visibility" value="public" checked>
+                                        <span class="radio-text">Public</span>
+                                    </label>
+                                    <label class="radio-item">
+                                        <input type="radio" name="profile-visibility" value="private">
+                                        <span class="radio-text">Private</span>
+                                    </label>
+                                    <label class="radio-item">
+                                        <input type="radio" name="profile-visibility" value="friends">
+                                        <span class="radio-text">Friends Only</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <label>Data Analytics</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="analytics-toggle" checked>
+                                    <label for="analytics-toggle" class="toggle-label">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-text">Enabled</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification Settings -->
+                    <div class="notification-settings bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>Notification Settings</h2>
+                            <p>Manage Your Notification Preferences</p>
+                        </div>
+                        <div class="settings-form">
+                            <div class="setting-item">
+                                <label>Email Notifications</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="email-notifications" checked>
+                                    <label for="email-notifications" class="toggle-label">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-text">Enabled</span>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <label>Push Notifications</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="push-notifications">
+                                    <label for="push-notifications" class="toggle-label">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-text">Disabled</span>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <label>SMS Notifications</label>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="sms-notifications">
+                                    <label for="sms-notifications" class="toggle-label">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-text">Disabled</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Appearance Settings -->
+                    <div class="appearance-settings bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>Appearance Settings</h2>
+                            <p>Customize Your Dashboard Look</p>
+                        </div>
+                        <div class="settings-form">
+                            <div class="setting-item">
+                                <label>Theme</label>
+                                <div class="theme-options">
+                                    <div class="theme-option active" data-theme="light">
+                                        <div class="theme-preview light-theme"></div>
+                                        <span>Light</span>
+                                    </div>
+                                    <div class="theme-option" data-theme="dark">
+                                        <div class="theme-preview dark-theme"></div>
+                                        <span>Dark</span>
+                                    </div>
+                                    <div class="theme-option" data-theme="auto">
+                                        <div class="theme-preview auto-theme"></div>
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <label for="sidebar-position">Sidebar Position</label>
+                                <select id="sidebar-position">
+                                    <option value="left">Left</option>
+                                    <option value="right">Right</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System Settings -->
+                    <div class="system-settings bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>System Settings</h2>
+                            <p>System Information and Maintenance</p>
+                        </div>
+                        <div class="system-info">
+                            <div class="info-item">
+                                <span class="info-label">Version:</span>
+                                <span class="info-value">Dashboard v2.0.1</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Last Updated:</span>
+                                <span class="info-value">January 15, 2024</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Storage Used:</span>
+                                <span class="info-value">2.5 GB of 10 GB</span>
+                            </div>
+                            <div class="system-actions">
+                                <button class="btn-secondary">Clear Cache</button>
+                                <button class="btn-secondary">Export Data</button>
+                                <button class="btn-danger">Reset Settings</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Changes Button -->
+                <div class="save-section bg-white p-20 rad-6 box-shadow">
+                    <div class="save-actions">
+                        <button class="btn-primary large">Save All Changes</button>
+                        <button class="btn-secondary">Reset to Defaults</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle switch functionality
+        document.querySelectorAll('.toggle-switch input[type="checkbox"]').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const textSpan = this.parentNode.querySelector('.toggle-text');
+                textSpan.textContent = this.checked ? 'Enabled' : 'Disabled';
+            });
+        });
+
+        // Theme selection
+        document.querySelectorAll('.theme-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.theme-option').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Save changes
+        document.querySelector('.btn-primary.large').addEventListener('click', function() {
+            alert('Settings saved successfully!');
+        });
+    </script>
+</body>
+
+</html>

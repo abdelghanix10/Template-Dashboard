@@ -5,6 +5,9 @@
 .between-flex {
     justify-content: space-between;
 }
+.align-center {
+    align-items: center;
+}
 /* End Box */
 /* Start Margin and Padding */
 .m-auto {
