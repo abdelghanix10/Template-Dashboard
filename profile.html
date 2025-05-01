@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Dashboard</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page d-flex">
+        <div class="sidebar bg-white p-relative">
+            <h3 class="logo">AB</h3>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fa fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html" class="active">
+                        <i class="fa fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <i class="fa fa-list"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html">
+                        <i class="fa fa-graduation-cap"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="friends.html">
+                        <i class="fa fa-user-friends"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fa fa-file"></i>
+                        <span>Files</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="plans.html">
+                        <i class="fa fa-credit-card"></i>
+                        <span>Plans</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="conten">
+            <div class="head bg-white d-flex between-flex">
+                <div class="search p-relative">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Type A Keyword">
+                </div>
+                <div class="icons d-flex align-center">
+                    <span class="notification p-relative">
+                        <i class="fa fa-bell"></i>
+                    </span>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+                        alt=""
+                        style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+
+            <div class="main p-20">
+                <div class="title">
+                    <h1 class="p-relative">Profile</h1>
+                </div>
+                <div class="content">
+                    <!-- Profile Header -->
+                    <div class="profile-header bg-white p-20 rad-6 box-shadow">
+                        <div class="profile-cover">
+                            <div class="cover-image">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=300&fit=crop" alt="Cover" class="cover-img">
+                                <button class="edit-cover-btn">
+                                    <i class="fa fa-camera"></i>
+                                </button>
+                            </div>
+                            <div class="profile-info">
+                                <div class="avatar-section">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Profile" class="profile-avatar">
+                                    <button class="edit-avatar-btn">
+                                        <i class="fa fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="user-details">
+                                    <h2>Abdelrahman Ahmed</h2>
+                                    <p class="title">Full Stack Developer</p>
+                                    <p class="location">
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        Cairo, Egypt
+                                    </p>
+                                    <div class="profile-stats">
+                                        <div class="stat">
+                                            <span class="number">125</span>
+                                            <span class="label">Projects</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="number">2.5K</span>
+                                            <span class="label">Followers</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="number">850</span>
+                                            <span class="label">Following</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="personal-info bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>Personal Information</h2>
+                            <p>Manage Your Personal Details</p>
+                        </div>
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" value="Abdelrahman">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" value="Ahmed">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" value="abdelrahman@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" value="+20 123 456 7890">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="jobTitle">Job Title</label>
+                                    <input type="text" id="jobTitle" value="Full Stack Developer">
+                                </div>
+                                <div class="form-group">
+                                    <label for="company">Company</label>
+                                    <input type="text" id="company" value="Tech Solutions Inc.">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="bio">Bio</label>
+                                    <textarea id="bio" rows="4" placeholder="Tell us about yourself...">Passionate Full Stack Developer with 5+ years of experience in creating innovative web solutions. Specialized in React, Node.js, and modern web technologies.</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>Contact Information</h2>
+                            <p>How People Can Reach You</p>
+                        </div>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">abdelrahman@example.com</span>
+                                </div>
+                                <button class="edit-contact-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">+20 123 456 7890</span>
+                                </div>
+                                <button class="edit-contact-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Address</span>
+                                    <span class="contact-value">123 Tech Street, Cairo, Egypt</span>
+                                </div>
+                                <button class="edit-contact-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Website</span>
+                                    <span class="contact-value">www.abdelrahman-dev.com</span>
+                                </div>
+                                <button class="edit-contact-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-media bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>Social Media</h2>
+                            <p>Connect Your Social Accounts</p>
+                        </div>
+                        <div class="social-links">
+                            <div class="social-item connected">
+                                <div class="social-icon github">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="social-details">
+                                    <span class="social-name">GitHub</span>
+                                    <span class="social-username">@abdelrahman-dev</span>
+                                </div>
+                                <button class="disconnect-btn">Disconnect</button>
+                            </div>
+                            <div class="social-item connected">
+                                <div class="social-icon linkedin">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="social-details">
+                                    <span class="social-name">LinkedIn</span>
+                                    <span class="social-username">@abdelrahman-ahmed</span>
+                                </div>
+                                <button class="disconnect-btn">Disconnect</button>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="social-details">
+                                    <span class="social-name">Twitter</span>
+                                    <span class="social-username">Not Connected</span>
+                                </div>
+                                <button class="connect-btn">Connect</button>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="social-details">
+                                    <span class="social-name">Instagram</span>
+                                    <span class="social-username">Not Connected</span>
+                                </div>
+                                <button class="connect-btn">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills & Expertise -->
+                    <div class="skills-section bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>Skills & Expertise</h2>
+                            <p>Your Professional Skills</p>
+                        </div>
+                        <div class="skills-container">
+                            <div class="skill-category">
+                                <h3>Frontend Development</h3>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Vue.js</span>
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">CSS3</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Backend Development</h3>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Express.js</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">REST APIs</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Tools & Technologies</h3>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">VS Code</span>
+                                    <span class="skill-tag">Figma</span>
+                                </div>
+                            </div>
+                            <button class="add-skill-btn">
+                                <i class="fa fa-plus"></i>
+                                Add Skill
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Account Security -->
+                    <div class="account-security bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2>Account Security</h2>
+                            <p>Manage Your Account Security Settings</p>
+                        </div>
+                        <div class="security-items">
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h3>Password</h3>
+                                    <p>Last changed 2 months ago</p>
+                                </div>
+                                <button class="btn-primary">Change Password</button>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h3>Two-Factor Authentication</h3>
+                                    <p>Add an extra layer of security</p>
+                                </div>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="2fa-profile" checked>
+                                    <label for="2fa-profile" class="toggle-label">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-text">Enabled</span>
+                                </div>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h3>Login Activity</h3>
+                                    <p>See recent login locations and devices</p>
+                                </div>
+                                <button class="btn-secondary">View Activity</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Changes Button -->
+                <div class="save-section bg-white p-20 rad-6 box-shadow">
+                    <div class="save-actions">
+                        <button class="btn-primary large">Save Profile Changes</button>
+                        <button class="btn-secondary">Cancel Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Form validation
+        document.querySelectorAll('.profile-form input, .profile-form textarea').forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.value.trim() === '') {
+                    this.style.borderColor = '#ff4757';
+                } else {
+                    this.style.borderColor = '#ddd';
+                }
+            });
+        });
+
+        // Toggle switch functionality
+        document.querySelectorAll('.toggle-switch input[type="checkbox"]').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const textSpan = this.parentNode.querySelector('.toggle-text');
+                textSpan.textContent = this.checked ? 'Enabled' : 'Disabled';
+            });
+        });
+
+        // Social media connect/disconnect
+        document.querySelectorAll('.connect-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.textContent = 'Disconnect';
+                this.className = 'disconnect-btn';
+                this.parentElement.classList.add('connected');
+                const username = this.parentElement.querySelector('.social-username');
+                const platform = this.parentElement.querySelector('.social-name').textContent.toLowerCase();
+                username.textContent = `@user-${platform}`;
+            });
+        });
+
+        document.querySelectorAll('.disconnect-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.textContent = 'Connect';
+                this.className = 'connect-btn';
+                this.parentElement.classList.remove('connected');
+                const username = this.parentElement.querySelector('.social-username');
+                username.textContent = 'Not Connected';
+            });
+        });
+
+        // Add skill functionality
+        document.querySelector('.add-skill-btn').addEventListener('click', function() {
+            const skillName = prompt('Enter skill name:');
+            if (skillName && skillName.trim() !== '') {
+                const skillTag = document.createElement('span');
+                skillTag.className = 'skill-tag';
+                skillTag.textContent = skillName.trim();
+                
+                // Add to the first category (you can modify this logic)
+                const firstCategory = document.querySelector('.skills-tags');
+                firstCategory.appendChild(skillTag);
+            }
+        });
+
+        // Save changes
+        document.querySelector('.btn-primary.large').addEventListener('click', function() {
+            alert('Profile updated successfully!');
+        });
+
+        // Avatar and cover image upload simulation
+        document.querySelector('.edit-avatar-btn').addEventListener('click', function() {
+            alert('Avatar upload functionality would be implemented here');
+        });
+
+        document.querySelector('.edit-cover-btn').addEventListener('click', function() {
+            alert('Cover image upload functionality would be implemented here');
+        });
+    </script>
+</body>
+
+</html>
