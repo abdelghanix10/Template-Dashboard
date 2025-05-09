@@ -98,14 +98,16 @@
                     <div class="profile-header bg-white p-20 rad-6 box-shadow">
                         <div class="profile-cover">
                             <div class="cover-image">
-                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=300&fit=crop" alt="Cover" class="cover-img">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=300&fit=crop"
+                                    alt="Cover" class="cover-img">
                                 <button class="edit-cover-btn">
                                     <i class="fa fa-camera"></i>
                                 </button>
                             </div>
                             <div class="profile-info">
                                 <div class="avatar-section">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Profile" class="profile-avatar">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+                                        alt="Profile" class="profile-avatar">
                                     <button class="edit-avatar-btn">
                                         <i class="fa fa-camera"></i>
                                     </button>
@@ -176,7 +178,8 @@
                             <div class="form-row">
                                 <div class="form-group full-width">
                                     <label for="bio">Bio</label>
-                                    <textarea id="bio" rows="4" placeholder="Tell us about yourself...">Passionate Full Stack Developer with 5+ years of experience in creating innovative web solutions. Specialized in React, Node.js, and modern web technologies.</textarea>
+                                    <textarea id="bio" rows="4"
+                                        placeholder="Tell us about yourself...">Passionate Full Stack Developer with 5+ years of experience in creating innovative web solutions. Specialized in React, Node.js, and modern web technologies.</textarea>
                                 </div>
                             </div>
                         </form>
@@ -388,7 +391,7 @@
     <script>
         // Form validation
         document.querySelectorAll('.profile-form input, .profile-form textarea').forEach(input => {
-            input.addEventListener('blur', function() {
+            input.addEventListener('blur', function () {
                 if (this.value.trim() === '') {
                     this.style.borderColor = '#ff4757';
                 } else {
@@ -399,7 +402,7 @@
 
         // Toggle switch functionality
         document.querySelectorAll('.toggle-switch input[type="checkbox"]').forEach(toggle => {
-            toggle.addEventListener('change', function() {
+            toggle.addEventListener('change', function () {
                 const textSpan = this.parentNode.querySelector('.toggle-text');
                 textSpan.textContent = this.checked ? 'Enabled' : 'Disabled';
             });
@@ -407,7 +410,7 @@
 
         // Social media connect/disconnect
         document.querySelectorAll('.connect-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 this.textContent = 'Disconnect';
                 this.className = 'disconnect-btn';
                 this.parentElement.classList.add('connected');
@@ -418,7 +421,7 @@
         });
 
         document.querySelectorAll('.disconnect-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 this.textContent = 'Connect';
                 this.className = 'connect-btn';
                 this.parentElement.classList.remove('connected');
@@ -428,13 +431,13 @@
         });
 
         // Add skill functionality
-        document.querySelector('.add-skill-btn').addEventListener('click', function() {
+        document.querySelector('.add-skill-btn').addEventListener('click', function () {
             const skillName = prompt('Enter skill name:');
             if (skillName && skillName.trim() !== '') {
                 const skillTag = document.createElement('span');
                 skillTag.className = 'skill-tag';
                 skillTag.textContent = skillName.trim();
-                
+
                 // Add to the first category (you can modify this logic)
                 const firstCategory = document.querySelector('.skills-tags');
                 firstCategory.appendChild(skillTag);
@@ -442,16 +445,16 @@
         });
 
         // Save changes
-        document.querySelector('.btn-primary.large').addEventListener('click', function() {
+        document.querySelector('.btn-primary.large').addEventListener('click', function () {
             alert('Profile updated successfully!');
         });
 
         // Avatar and cover image upload simulation
-        document.querySelector('.edit-avatar-btn').addEventListener('click', function() {
+        document.querySelector('.edit-avatar-btn').addEventListener('click', function () {
             alert('Avatar upload functionality would be implemented here');
         });
 
-        document.querySelector('.edit-cover-btn').addEventListener('click', function() {
+        document.querySelector('.edit-cover-btn').addEventListener('click', function () {
             alert('Cover image upload functionality would be implemented here');
         });
     </script>

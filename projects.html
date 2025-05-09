@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Dashboard</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page d-flex">
+        <div class="sidebar bg-white p-relative">
+            <h3 class="logo">AB</h3>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fa fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fa fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html" class="active">
+                        <i class="fa fa-list"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html">
+                        <i class="fa fa-graduation-cap"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="friends.html">
+                        <i class="fa fa-user-friends"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fa fa-file"></i>
+                        <span>Files</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="plans.html">
+                        <i class="fa fa-credit-card"></i>
+                        <span>Plans</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="conten">
+            <div class="head bg-white d-flex between-flex">
+                <div class="search p-relative">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search projects...">
+                </div>
+                <div class="icons d-flex align-center">
+                    <span class="notification p-relative">
+                        <i class="fa fa-bell"></i>
+                    </span>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+                        alt=""
+                        style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+
+            <div class="main p-20">
+                <div class="title">
+                    <h1 class="p-relative">Projects</h1>
+                </div>
+
+                <!-- Projects Header -->
+                <div class="projects-header bg-white p-20 rad-6 box-shadow">
+                    <div class="header-content d-flex between-flex align-center">
+                        <div class="projects-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">24</span>
+                                <span class="stat-label">Total Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">In Progress</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">14</span>
+                                <span class="stat-label">Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">On Hold</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary new-project-btn">
+                            <i class="fa fa-plus"></i>
+                            New Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filter and Sort -->
+                <div class="projects-controls bg-white p-20 rad-6 box-shadow">
+                    <div class="controls-content d-flex between-flex align-center">
+                        <div class="filter-options d-flex align-center">
+                            <select class="filter-select" id="status-filter">
+                                <option value="all">All Status</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="completed">Completed</option>
+                                <option value="on-hold">On Hold</option>
+                                <option value="planning">Planning</option>
+                            </select>
+                            <select class="filter-select" id="priority-filter">
+                                <option value="all">All Priorities</option>
+                                <option value="high">High Priority</option>
+                                <option value="medium">Medium Priority</option>
+                                <option value="low">Low Priority</option>
+                            </select>
+                        </div>
+                        <div class="view-options d-flex align-center">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fa fa-th"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fa fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <!-- Projects Grid -->
+                    <div class="projects-grid" id="projects-container">
+                        <!-- Project Card 1 -->
+                        <div class="project-card bg-white p-20 rad-6 box-shadow" data-status="in-progress" data-priority="high">
+                            <div class="project-header">
+                                <div class="project-status status-in-progress">In Progress</div>
+                                <div class="project-priority priority-high">High</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" alt="Project">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">E-Commerce Dashboard</h3>
+                                <p class="project-description">Modern admin dashboard for e-commerce platform with analytics and inventory management.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                </div>
+                                <div class="project-progress">
+                                    <div class="progress-info">
+                                        <span>Progress</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="project-team">
+                                    <div class="team-avatars">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                        <span class="more-members">+2</span>
+                                    </div>
+                                    <div class="project-deadline">
+                                        <i class="fa fa-calendar"></i>
+                                        <span>Due: Jan 15, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="action-btn view-btn-project">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2 -->
+                        <div class="project-card bg-white p-20 rad-6 box-shadow" data-status="completed" data-priority="medium">
+                            <div class="project-header">
+                                <div class="project-status status-completed">Completed</div>
+                                <div class="project-priority priority-medium">Medium</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=300&h=200&fit=crop" alt="Project">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Mobile Banking App</h3>
+                                <p class="project-description">Cross-platform mobile application for banking services with biometric authentication.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                </div>
+                                <div class="project-progress">
+                                    <div class="progress-info">
+                                        <span>Progress</span>
+                                        <span>100%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill completed" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="project-team">
+                                    <div class="team-avatars">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                    </div>
+                                    <div class="project-deadline completed-date">
+                                        <i class="fa fa-check-circle"></i>
+                                        <span>Completed: Dec 20, 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="action-btn view-btn-project">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 3 -->
+                        <div class="project-card bg-white p-20 rad-6 box-shadow" data-status="planning" data-priority="low">
+                            <div class="project-header">
+                                <div class="project-status status-planning">Planning</div>
+                                <div class="project-priority priority-low">Low</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=300&h=200&fit=crop" alt="Project">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">AI Content Generator</h3>
+                                <p class="project-description">AI-powered content generation platform for blogs, social media, and marketing materials.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">Vue.js</span>
+                                </div>
+                                <div class="project-progress">
+                                    <div class="progress-info">
+                                        <span>Progress</span>
+                                        <span>15%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 15%"></div>
+                                    </div>
+                                </div>
+                                <div class="project-team">
+                                    <div class="team-avatars">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                        <span class="more-members">+1</span>
+                                    </div>
+                                    <div class="project-deadline">
+                                        <i class="fa fa-calendar"></i>
+                                        <span>Due: Mar 30, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="action-btn view-btn-project">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 4 -->
+                        <div class="project-card bg-white p-20 rad-6 box-shadow" data-status="on-hold" data-priority="medium">
+                            <div class="project-header">
+                                <div class="project-status status-on-hold">On Hold</div>
+                                <div class="project-priority priority-medium">Medium</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Project">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Inventory Management System</h3>
+                                <p class="project-description">Cloud-based inventory tracking system with real-time analytics and automated reporting.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Angular</span>
+                                    <span class="tech-tag">.NET Core</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                </div>
+                                <div class="project-progress">
+                                    <div class="progress-info">
+                                        <span>Progress</span>
+                                        <span>45%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill on-hold" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                                <div class="project-team">
+                                    <div class="team-avatars">
+                                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                    </div>
+                                    <div class="project-deadline on-hold-date">
+                                        <i class="fa fa-pause-circle"></i>
+                                        <span>On Hold Since: Dec 1, 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="action-btn view-btn-project">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 5 -->
+                        <div class="project-card bg-white p-20 rad-6 box-shadow" data-status="in-progress" data-priority="high">
+                            <div class="project-header">
+                                <div class="project-status status-in-progress">In Progress</div>
+                                <div class="project-priority priority-high">High</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=300&h=200&fit=crop" alt="Project">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Healthcare Portal</h3>
+                                <p class="project-description">Patient management system with appointment scheduling and telemedicine capabilities.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Laravel</span>
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">MySQL</span>
+                                </div>
+                                <div class="project-progress">
+                                    <div class="progress-info">
+                                        <span>Progress</span>
+                                        <span>60%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="project-team">
+                                    <div class="team-avatars">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                    </div>
+                                    <div class="project-deadline">
+                                        <i class="fa fa-calendar"></i>
+                                        <span>Due: Feb 28, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="action-btn view-btn-project">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 6 -->
+                        <div class="project-card bg-white p-20 rad-6 box-shadow" data-status="completed" data-priority="low">
+                            <div class="project-header">
+                                <div class="project-status status-completed">Completed</div>
+                                <div class="project-priority priority-low">Low</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1486312338219-ce68e2c6b281?w=300&h=200&fit=crop" alt="Project">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Portfolio Website</h3>
+                                <p class="project-description">Personal portfolio website with modern design and interactive animations.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <div class="project-progress">
+                                    <div class="progress-info">
+                                        <span>Progress</span>
+                                        <span>100%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill completed" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="project-team">
+                                    <div class="team-avatars">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Team member">
+                                    </div>
+                                    <div class="project-deadline completed-date">
+                                        <i class="fa fa-check-circle"></i>
+                                        <span>Completed: Nov 15, 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="action-btn view-btn-project">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete-btn">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Filter functionality
+        const statusFilter = document.getElementById('status-filter');
+        const priorityFilter = document.getElementById('priority-filter');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        function filterProjects() {
+            const statusValue = statusFilter.value;
+            const priorityValue = priorityFilter.value;
+
+            projectCards.forEach(card => {
+                const cardStatus = card.getAttribute('data-status');
+                const cardPriority = card.getAttribute('data-priority');
+
+                const statusMatch = statusValue === 'all' || cardStatus === statusValue;
+                const priorityMatch = priorityValue === 'all' || cardPriority === priorityValue;
+
+                if (statusMatch && priorityMatch) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        statusFilter.addEventListener('change', filterProjects);
+        priorityFilter.addEventListener('change', filterProjects);
+
+        // View toggle functionality
+        const viewButtons = document.querySelectorAll('.view-btn');
+        const projectsContainer = document.getElementById('projects-container');
+
+        viewButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                viewButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const view = this.getAttribute('data-view');
+                if (view === 'list') {
+                    projectsContainer.classList.add('list-view');
+                } else {
+                    projectsContainer.classList.remove('list-view');
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('input[type="search"]');
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            projectCards.forEach(card => {
+                const title = card.querySelector('.project-title').textContent.toLowerCase();
+                const description = card.querySelector('.project-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Project actions
+        document.querySelectorAll('.view-btn-project').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const projectTitle = this.closest('.project-card').querySelector('.project-title').textContent;
+                alert(`Viewing project: ${projectTitle}`);
+            });
+        });
+
+        document.querySelectorAll('.edit-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const projectTitle = this.closest('.project-card').querySelector('.project-title').textContent;
+                alert(`Editing project: ${projectTitle}`);
+            });
+        });
+
+        document.querySelectorAll('.delete-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const projectTitle = this.closest('.project-card').querySelector('.project-title').textContent;
+                if (confirm(`Are you sure you want to delete "${projectTitle}"?`)) {
+                    this.closest('.project-card').remove();
+                }
+            });
+        });
+
+        // New project button
+        document.querySelector('.new-project-btn').addEventListener('click', function() {
+            alert('New project creation form would open here');
+        });
+    </script>
+</body>
+
+</html>
