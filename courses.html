@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Dashboard</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page d-flex">
+        <div class="sidebar bg-white p-relative">
+            <h3 class="logo">AB</h3>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fa fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fa fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <i class="fa fa-list"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html" class="active">
+                        <i class="fa fa-graduation-cap"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="friends.html">
+                        <i class="fa fa-user-friends"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fa fa-file"></i>
+                        <span>Files</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="plans.html">
+                        <i class="fa fa-credit-card"></i>
+                        <span>Plans</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="conten">
+            <div class="head bg-white d-flex between-flex">
+                <div class="search p-relative">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search courses...">
+                </div>
+                <div class="icons d-flex align-center">
+                    <span class="notification p-relative">
+                        <i class="fa fa-bell"></i>
+                    </span>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+                        alt=""
+                        style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+
+            <div class="main p-20">
+                <div class="title">
+                    <h1 class="p-relative">Courses</h1>
+                </div>
+
+                <!-- Courses Header -->
+                <div class="courses-header bg-white p-20 rad-6 box-shadow">
+                    <div class="header-content d-flex between-flex align-center">
+                        <div class="courses-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Enrolled Courses</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">In Progress</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">156</span>
+                                <span class="stat-label">Total Hours</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary browse-courses-btn">
+                            <i class="fa fa-search"></i>
+                            Browse Courses
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Learning Progress -->
+                <div class="learning-progress bg-white p-20 rad-6 box-shadow">
+                    <div class="titleSection">
+                        <h2>Learning Progress</h2>
+                        <p>Your Overall Learning Journey</p>
+                    </div>
+                    <div class="progress-overview">
+                        <div class="progress-item">
+                            <div class="progress-icon">
+                                <i class="fa fa-trophy c-yellow"></i>
+                            </div>
+                            <div class="progress-details">
+                                <h3>Achievements</h3>
+                                <p>15 Certificates Earned</p>
+                                <div class="achievement-badges">
+                                    <span class="badge gold">Gold Learner</span>
+                                    <span class="badge silver">Quick Starter</span>
+                                    <span class="badge bronze">Dedicated</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-icon">
+                                <i class="fa fa-clock c-blue"></i>
+                            </div>
+                            <div class="progress-details">
+                                <h3>Study Time</h3>
+                                <p>This Week: 12 hours</p>
+                                <div class="time-chart">
+                                    <div class="chart-bar" style="height: 60%"></div>
+                                    <div class="chart-bar" style="height: 80%"></div>
+                                    <div class="chart-bar" style="height: 45%"></div>
+                                    <div class="chart-bar" style="height: 90%"></div>
+                                    <div class="chart-bar" style="height: 70%"></div>
+                                    <div class="chart-bar" style="height: 85%"></div>
+                                    <div class="chart-bar" style="height: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-icon">
+                                <i class="fa fa-target c-green"></i>
+                            </div>
+                            <div class="progress-details">
+                                <h3>Goals</h3>
+                                <p>Monthly Target: 80%</p>
+                                <div class="goal-progress">
+                                    <div class="goal-bar">
+                                        <div class="goal-fill" style="width: 75%"></div>
+                                    </div>
+                                    <span class="goal-percentage">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter and Categories -->
+                <div class="courses-controls bg-white p-20 rad-6 box-shadow">
+                    <div class="controls-content d-flex between-flex align-center">
+                        <div class="category-tabs">
+                            <button class="category-tab active" data-category="all">All Courses</button>
+                            <button class="category-tab" data-category="in-progress">In Progress</button>
+                            <button class="category-tab" data-category="completed">Completed</button>
+                            <button class="category-tab" data-category="not-started">Not Started</button>
+                        </div>
+                        <div class="filter-options d-flex align-center">
+                            <select class="filter-select" id="difficulty-filter">
+                                <option value="all">All Levels</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                            <select class="filter-select" id="category-filter">
+                                <option value="all">All Categories</option>
+                                <option value="programming">Programming</option>
+                                <option value="design">Design</option>
+                                <option value="business">Business</option>
+                                <option value="marketing">Marketing</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <!-- Courses Grid -->
+                    <div class="courses-grid" id="courses-container">
+                        <!-- Course Card 1 -->
+                        <div class="course-card bg-white p-20 rad-6 box-shadow" data-status="in-progress"
+                            data-difficulty="intermediate" data-category="programming">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=200&fit=crop"
+                                    alt="Course">
+                                <div class="course-duration">
+                                    <i class="fa fa-clock"></i>
+                                    <span>24 hours</span>
+                                </div>
+                                <div class="course-level level-intermediate">Intermediate</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-category">Programming</div>
+                                <h3 class="course-title">Full Stack Web Development</h3>
+                                <p class="course-description">Complete guide to modern web development with React,
+                                    Node.js, and MongoDB. Build real-world applications.</p>
+                                <div class="course-instructor">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"
+                                        alt="Instructor">
+                                    <div class="instructor-info">
+                                        <span class="instructor-name">John Smith</span>
+                                        <span class="instructor-title">Senior Developer</span>
+                                    </div>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-info">
+                                        <span>Progress</span>
+                                        <span>65%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fa fa-play-circle"></i>
+                                        <span>45 Lessons</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-users"></i>
+                                        <span>1.2k Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-star"></i>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-primary continue-btn">Continue Learning</button>
+                                <button class="action-btn bookmark-btn">
+                                    <i class="fa fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn share-btn">
+                                    <i class="fa fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 2 -->
+                        <div class="course-card bg-white p-20 rad-6 box-shadow" data-status="completed"
+                            data-difficulty="beginner" data-category="design">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300&h=200&fit=crop"
+                                    alt="Course">
+                                <div class="course-duration">
+                                    <i class="fa fa-clock"></i>
+                                    <span>18 hours</span>
+                                </div>
+                                <div class="course-level level-beginner">Beginner</div>
+                                <div class="completion-badge">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-category">Design</div>
+                                <h3 class="course-title">UI/UX Design Fundamentals</h3>
+                                <p class="course-description">Learn the basics of user interface and user experience
+                                    design. Create beautiful and functional designs.</p>
+                                <div class="course-instructor">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face"
+                                        alt="Instructor">
+                                    <div class="instructor-info">
+                                        <span class="instructor-name">Sarah Johnson</span>
+                                        <span class="instructor-title">UX Designer</span>
+                                    </div>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-info">
+                                        <span>Completed</span>
+                                        <span>100%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill completed" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fa fa-play-circle"></i>
+                                        <span>32 Lessons</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-users"></i>
+                                        <span>850 Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-star"></i>
+                                        <span>4.6</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-secondary review-btn">Review Course</button>
+                                <button class="btn-primary certificate-btn">
+                                    <i class="fa fa-certificate"></i>
+                                    Certificate
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 3 -->
+                        <div class="course-card bg-white p-20 rad-6 box-shadow" data-status="in-progress"
+                            data-difficulty="advanced" data-category="programming">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=300&h=200&fit=crop"
+                                    alt="Course">
+                                <div class="course-duration">
+                                    <i class="fa fa-clock"></i>
+                                    <span>36 hours</span>
+                                </div>
+                                <div class="course-level level-advanced">Advanced</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-category">Programming</div>
+                                <h3 class="course-title">Machine Learning with Python</h3>
+                                <p class="course-description">Deep dive into machine learning algorithms, neural
+                                    networks, and AI applications using Python.</p>
+                                <div class="course-instructor">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"
+                                        alt="Instructor">
+                                    <div class="instructor-info">
+                                        <span class="instructor-name">Dr. Michael Chen</span>
+                                        <span class="instructor-title">AI Researcher</span>
+                                    </div>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-info">
+                                        <span>Progress</span>
+                                        <span>25%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 25%"></div>
+                                    </div>
+                                </div>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fa fa-play-circle"></i>
+                                        <span>58 Lessons</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-users"></i>
+                                        <span>456 Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-star"></i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-primary continue-btn">Continue Learning</button>
+                                <button class="action-btn bookmark-btn active">
+                                    <i class="fa fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn share-btn">
+                                    <i class="fa fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 4 -->
+                        <div class="course-card bg-white p-20 rad-6 box-shadow" data-status="not-started"
+                            data-difficulty="intermediate" data-category="business">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop"
+                                    alt="Course">
+                                <div class="course-duration">
+                                    <i class="fa fa-clock"></i>
+                                    <span>20 hours</span>
+                                </div>
+                                <div class="course-level level-intermediate">Intermediate</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-category">Business</div>
+                                <h3 class="course-title">Digital Marketing Strategy</h3>
+                                <p class="course-description">Master digital marketing techniques, SEO, social media
+                                    marketing, and analytics for business growth.</p>
+                                <div class="course-instructor">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face"
+                                        alt="Instructor">
+                                    <div class="instructor-info">
+                                        <span class="instructor-name">Emily Davis</span>
+                                        <span class="instructor-title">Marketing Expert</span>
+                                    </div>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-info">
+                                        <span>Not Started</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fa fa-play-circle"></i>
+                                        <span>40 Lessons</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-users"></i>
+                                        <span>920 Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-star"></i>
+                                        <span>4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-primary start-btn">Start Course</button>
+                                <button class="action-btn bookmark-btn">
+                                    <i class="fa fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn share-btn">
+                                    <i class="fa fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 5 -->
+                        <div class="course-card bg-white p-20 rad-6 box-shadow" data-status="in-progress"
+                            data-difficulty="beginner" data-category="design">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=300&h=200&fit=crop"
+                                    alt="Course">
+                                <div class="course-duration">
+                                    <i class="fa fa-clock"></i>
+                                    <span>15 hours</span>
+                                </div>
+                                <div class="course-level level-beginner">Beginner</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-category">Design</div>
+                                <h3 class="course-title">Graphic Design Basics</h3>
+                                <p class="course-description">Learn fundamental principles of graphic design, color
+                                    theory, typography, and layout design.</p>
+                                <div class="course-instructor">
+                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=40&h=40&fit=crop&crop=face"
+                                        alt="Instructor">
+                                    <div class="instructor-info">
+                                        <span class="instructor-name">Alex Rivera</span>
+                                        <span class="instructor-title">Graphic Designer</span>
+                                    </div>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-info">
+                                        <span>Progress</span>
+                                        <span>40%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fa fa-play-circle"></i>
+                                        <span>28 Lessons</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-users"></i>
+                                        <span>750 Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-star"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-primary continue-btn">Continue Learning</button>
+                                <button class="action-btn bookmark-btn">
+                                    <i class="fa fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn share-btn">
+                                    <i class="fa fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 6 -->
+                        <div class="course-card bg-white p-20 rad-6 box-shadow" data-status="completed"
+                            data-difficulty="intermediate" data-category="marketing">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=300&h=200&fit=crop"
+                                    alt="Course">
+                                <div class="course-duration">
+                                    <i class="fa fa-clock"></i>
+                                    <span>22 hours</span>
+                                </div>
+                                <div class="course-level level-intermediate">Intermediate</div>
+                                <div class="completion-badge">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-category">Marketing</div>
+                                <h3 class="course-title">Social Media Marketing</h3>
+                                <p class="course-description">Comprehensive guide to social media marketing across all
+                                    major platforms and audience engagement strategies.</p>
+                                <div class="course-instructor">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face"
+                                        alt="Instructor">
+                                    <div class="instructor-info">
+                                        <span class="instructor-name">Lisa Thompson</span>
+                                        <span class="instructor-title">Social Media Expert</span>
+                                    </div>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-info">
+                                        <span>Completed</span>
+                                        <span>100%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill completed" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="fa fa-play-circle"></i>
+                                        <span>38 Lessons</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-users"></i>
+                                        <span>1.1k Students</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fa fa-star"></i>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-secondary review-btn">Review Course</button>
+                                <button class="btn-primary certificate-btn">
+                                    <i class="fa fa-certificate"></i>
+                                    Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Category tabs functionality
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const courseCards = document.querySelectorAll('.course-card');
+
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                const category = this.getAttribute('data-category');
+                filterCourses(category);
+            });
+        });
+
+        function filterCourses(category = 'all') {
+            const difficultyValue = document.getElementById('difficulty-filter').value;
+            const categoryValue = document.getElementById('category-filter').value;
+
+            courseCards.forEach(card => {
+                const cardStatus = card.getAttribute('data-status');
+                const cardDifficulty = card.getAttribute('data-difficulty');
+                const cardCategory = card.getAttribute('data-category');
+
+                const statusMatch = category === 'all' || cardStatus === category;
+                const difficultyMatch = difficultyValue === 'all' || cardDifficulty === difficultyValue;
+                const categoryMatch = categoryValue === 'all' || cardCategory === categoryValue;
+
+                if (statusMatch && difficultyMatch && categoryMatch) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Filter dropdowns
+        document.getElementById('difficulty-filter').addEventListener('change', function () {
+            const activeTab = document.querySelector('.category-tab.active').getAttribute('data-category');
+            filterCourses(activeTab);
+        });
+
+        document.getElementById('category-filter').addEventListener('change', function () {
+            const activeTab = document.querySelector('.category-tab.active').getAttribute('data-category');
+            filterCourses(activeTab);
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('input[type="search"]');
+        searchInput.addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+
+            courseCards.forEach(card => {
+                const title = card.querySelector('.course-title').textContent.toLowerCase();
+                const description = card.querySelector('.course-description').textContent.toLowerCase();
+                const category = card.querySelector('.course-category').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || description.includes(searchTerm) || category.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Course actions
+        document.querySelectorAll('.continue-btn, .start-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const courseTitle = this.closest('.course-card').querySelector('.course-title').textContent;
+                alert(`Starting/Continuing course: ${courseTitle}`);
+            });
+        });
+
+        document.querySelectorAll('.review-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const courseTitle = this.closest('.course-card').querySelector('.course-title').textContent;
+                alert(`Reviewing course: ${courseTitle}`);
+            });
+        });
+
+        document.querySelectorAll('.certificate-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const courseTitle = this.closest('.course-card').querySelector('.course-title').textContent;
+                alert(`Downloading certificate for: ${courseTitle}`);
+            });
+        });
+
+        document.querySelectorAll('.bookmark-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const isBookmarked = this.classList.contains('active');
+                const courseTitle = this.closest('.course-card').querySelector('.course-title').textContent;
+                alert(isBookmarked ? `Bookmarked: ${courseTitle}` : `Removed bookmark: ${courseTitle}`);
+            });
+        });
+
+        document.querySelectorAll('.share-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const courseTitle = this.closest('.course-card').querySelector('.course-title').textContent;
+                alert(`Sharing course: ${courseTitle}`);
+            });
+        });
+
+        // Browse courses button
+        document.querySelector('.browse-courses-btn').addEventListener('click', function () {
+            alert('Browse courses catalog would open here');
+        });
+    </script>
+</body>
+
+</html>
