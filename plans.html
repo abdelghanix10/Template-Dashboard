@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans - Dashboard</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page d-flex">
+        <div class="sidebar bg-white p-relative">
+            <h3 class="logo">AB</h3>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fa fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fa fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html"><i class="fa fa-list"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html">
+                        <i class="fa fa-graduation-cap"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="friends.html">
+                        <i class="fa fa-user-friends"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fa fa-file"></i>
+                        <span>Files</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="plans.html" class="active">
+                        <i class="fa fa-credit-card"></i>
+                        <span>Plans</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="conten">
+            <div class="head bg-white d-flex between-flex">
+                <div class="search p-relative">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Type A Keyword">
+                </div>
+                <div class="icons d-flex align-center">
+                    <span class="notification p-relative">
+                        <i class="fa fa-bell"></i>
+                    </span>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+                        alt=""
+                        style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+
+            <div class="main p-20">
+                <div class="title">
+                    <h1 class="p-relative">Plans & Billing</h1>
+                </div>
+
+                <!-- Current Plan Overview -->
+                <div class="content">
+                    <div class="current-plan bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2><i class="fa fa-star c-yellow"></i> Current Plan</h2>
+                            <p>Your current subscription details and status</p>
+                        </div>
+                        <div class="plan-overview d-flex between-flex align-center">
+                            <div class="plan-info">
+                                <h3 class="c-blue">Professional Plan</h3>
+                                <p class="c-green">Active • Renews on March 15, 2024</p>
+                                <div class="plan-price">
+                                    <span class="price">$29</span>
+                                    <span class="period">/month</span>
+                                </div>
+                            </div>
+                            <div class="plan-actions">
+                                <button class="btn-secondary">Manage Plan</button>
+                                <button class="btn-primary">Upgrade</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Usage Statistics -->
+                    <div class="usage-stats bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2><i class="fa fa-chart-bar c-blue"></i> Usage This Month</h2>
+                            <p>Track your current usage against plan limits</p>
+                        </div>
+                        <div class="usage-grid">
+                            <div class="usage-item">
+                                <div class="usage-header d-flex between-flex align-center">
+                                    <div class="usage-title">
+                                        <h4>Storage</h4>
+                                        <p>12.5 GB of 50 GB used</p>
+                                    </div>
+                                    <span class="usage-percentage c-blue">25%</span>
+                                </div>
+                                <div class="usage-bar">
+                                    <div class="usage-progress" data-progress="25"></div>
+                                </div>
+                            </div>
+                            <div class="usage-item">
+                                <div class="usage-header d-flex between-flex align-center">
+                                    <div class="usage-title">
+                                        <h4>API Calls</h4>
+                                        <p>8,500 of 10,000 used</p>
+                                    </div>
+                                    <span class="usage-percentage c-yellow">85%</span>
+                                </div>
+                                <div class="usage-bar">
+                                    <div class="usage-progress warning" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="usage-item">
+                                <div class="usage-header d-flex between-flex align-center">
+                                    <div class="usage-title">
+                                        <h4>Team Members</h4>
+                                        <p>3 of 10 used</p>
+                                    </div>
+                                    <span class="usage-percentage c-green">30%</span>
+                                </div>
+                                <div class="usage-bar">
+                                    <div class="usage-progress" data-progress="30"></div>
+                                </div>
+                            </div>
+                            <div class="usage-item">
+                                <div class="usage-header d-flex between-flex align-center">
+                                    <div class="usage-title">
+                                        <h4>Projects</h4>
+                                        <p>15 of 25 used</p>
+                                    </div>
+                                    <span class="usage-percentage c-blue">60%</span>
+                                </div>
+                                <div class="usage-bar">
+                                    <div class="usage-progress" data-progress="60"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Available Plans -->
+                    <div class="available-plans bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2><i class="fa fa-layer-group c-green"></i> Available Plans</h2>
+                            <p>Choose the perfect plan for your needs</p>
+                        </div>
+                        <div class="plans-grid">
+                            <!-- Free Plan -->
+                            <div class="plan-card">
+                                <div class="plan-header">
+                                    <h3>Free</h3>
+                                    <div class="plan-price">
+                                        <span class="price">$0</span>
+                                        <span class="period">/month</span>
+                                    </div>
+                                    <p class="plan-description">Perfect for getting started</p>
+                                </div>
+                                <div class="plan-features">
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>5 GB Storage</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>1,000 API Calls</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>1 Team Member</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>3 Projects</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-times c-red"></i>
+                                        <span>Priority Support</span>
+                                    </div>
+                                </div>
+                                <button class="btn-secondary plan-btn">Current Plan</button>
+                            </div>
+
+                            <!-- Professional Plan -->
+                            <div class="plan-card featured">
+                                <div class="plan-badge">Most Popular</div>
+                                <div class="plan-header">
+                                    <h3>Professional</h3>
+                                    <div class="plan-price">
+                                        <span class="price">$29</span>
+                                        <span class="period">/month</span>
+                                    </div>
+                                    <p class="plan-description">For growing businesses</p>
+                                </div>
+                                <div class="plan-features">
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>50 GB Storage</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>10,000 API Calls</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>10 Team Members</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>25 Projects</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>Priority Support</span>
+                                    </div>
+                                </div>
+                                <button class="btn-primary plan-btn">Current Plan</button>
+                            </div>
+
+                            <!-- Enterprise Plan -->
+                            <div class="plan-card">
+                                <div class="plan-header">
+                                    <h3>Enterprise</h3>
+                                    <div class="plan-price">
+                                        <span class="price">$99</span>
+                                        <span class="period">/month</span>
+                                    </div>
+                                    <p class="plan-description">For large organizations</p>
+                                </div>
+                                <div class="plan-features">
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>500 GB Storage</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>Unlimited API Calls</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>Unlimited Team Members</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>Unlimited Projects</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fa fa-check c-green"></i>
+                                        <span>24/7 Phone Support</span>
+                                    </div>
+                                </div>
+                                <button class="btn-primary plan-btn">Upgrade</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Billing History -->
+                    <div class="billing-history bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2><i class="fa fa-receipt c-blue"></i> Billing History</h2>
+                            <p>Your recent invoices and payment history</p>
+                        </div>
+                        <div class="billing-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Invoice</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Feb 15, 2024</td>
+                                        <td>Professional Plan - Monthly</td>
+                                        <td>$29.00</td>
+                                        <td><span class="status-badge paid">Paid</span></td>
+                                        <td><a href="#" class="download-link"><i class="fa fa-download"></i>
+                                                Download</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jan 15, 2024</td>
+                                        <td>Professional Plan - Monthly</td>
+                                        <td>$29.00</td>
+                                        <td><span class="status-badge paid">Paid</span></td>
+                                        <td><a href="#" class="download-link"><i class="fa fa-download"></i>
+                                                Download</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dec 15, 2023</td>
+                                        <td>Professional Plan - Monthly</td>
+                                        <td>$29.00</td>
+                                        <td><span class="status-badge paid">Paid</span></td>
+                                        <td><a href="#" class="download-link"><i class="fa fa-download"></i>
+                                                Download</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nov 15, 2023</td>
+                                        <td>Plan Upgrade</td>
+                                        <td>$15.00</td>
+                                        <td><span class="status-badge paid">Paid</span></td>
+                                        <td><a href="#" class="download-link"><i class="fa fa-download"></i>
+                                                Download</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="payment-methods bg-white p-20 rad-6 box-shadow">
+                        <div class="titleSection">
+                            <h2><i class="fa fa-credit-card c-green"></i> Payment Methods</h2>
+                            <p>Manage your payment methods and billing information</p>
+                        </div>
+                        <div class="payment-cards">
+                            <div class="payment-card">
+                                <div class="card-info d-flex align-center">
+                                    <div class="card-icon">
+                                        <i class="fab fa-cc-visa c-blue"></i>
+                                    </div>
+                                    <div class="card-details">
+                                        <h4>Visa ending in 4242</h4>
+                                        <p>Expires 12/2025</p>
+                                    </div>
+                                    <div class="card-badge">
+                                        <span class="primary-badge">Primary</span>
+                                    </div>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn-secondary">Edit</button>
+                                    <button class="btn-danger">Remove</button>
+                                </div>
+                            </div>
+                            <div class="add-payment">
+                                <button class="btn-primary">
+                                    <i class="fa fa-plus"></i> Add Payment Method
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
