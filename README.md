@@ -4,7 +4,7 @@ A responsive HTML5 website template built with CSS and JavaScript.
 
 ## 🌐 Live Demo
 
-**[View Live Demo](https://babdellghani.github.io/Template-Dashboard/)**
+**[View Live Demo](https://abdelghanix10.github.io/Template-Dashboard/)**
 
 ## 📋 Overview
 
