@@ -131,33 +131,94 @@ ul {
     background-color: #f6f6f6;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+        padding: 15px;
+        gap: 25px;
+    }
+    
+    .sidebar .logo {
+        font-size: 18px;
+    }
+    
+    .sidebar ul li a {
+        font-size: 13px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 768px) {
     .sidebar {
         font-size: 12px;
-        width: 50px;
+        width: 60px;
         padding: 10px 8px;
+        gap: 20px;
     }
+    
+    .sidebar .logo {
+        font-size: 16px;
+    }
+    
     .sidebar .logo::after,
     .sidebar .logo::before {
         display: none;
     }
 
     .sidebar ul li a {
-        padding: 10px 0;
+        padding: 12px 0;
         justify-content: center;
+        border-radius: 8px;
     }
+    
     .sidebar ul li a span {
         display: none;
     }
+    
+    .sidebar ul li a i {
+        font-size: 16px;
+    }
+}
 
+@media (max-width: 500px) {
+    .sidebar {
+        width: 50px;
+        padding: 8px 5px;
+        gap: 15px;
+    }
+    
+    .sidebar .logo {
+        font-size: 14px;
+    }
+    
+    .sidebar ul li a {
+        padding: 10px 0;
+    }
+    
+    .sidebar ul li a i {
+        font-size: 14px;
+    }
 }
 /* End Sidebar */
 /* Start Content */
 .conten {
     width: calc(100% - 250px);
+    transition: width 0.3s ease;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
+    .conten {
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .conten {
+        width: calc(100% - 60px);
+    }
+}
+
+@media (max-width: 500px) {
     .conten {
         width: calc(100% - 50px);
     }
@@ -187,17 +248,135 @@ ul {
     cursor: pointer;
     font-size: 14px;
 }
+
+@media (max-width: 768px) {
+    .head {
+        padding: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .head input {
+        width: 150px;
+        padding: 8px;
+        padding-left: 30px;
+        font-size: 13px;
+    }
+    
+    .head .search i {
+        left: 25px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    .head {
+        padding: 8px;
+        gap: 8px;
+    }
+    
+    .head input {
+        width: 120px;
+        padding: 6px;
+        padding-left: 25px;
+        font-size: 12px;
+    }
+    
+    .head .search i {
+        left: 20px;
+        font-size: 12px;
+    }
+    
+    .head .icons img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+.head .icons {
+    gap: 15px;
+}
+
+.head .icons img {
+    transition: transform 0.3s ease;
+}
+
+.head .icons img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .head {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .head input {
+        width: 150px;
+        font-size: 13px;
+        padding: 6px;
+        padding-left: 25px;
+    }
+    
+    .head .search i {
+        left: 25px;
+        font-size: 13px;
+    }
+    
+    .head .icons {
+        gap: 10px;
+    }
+    
+    .head .icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .head {
+        padding: 8px 12px;
+        justify-content: space-between;
+    }
+    
+    .head input {
+        width: 120px;
+        font-size: 12px;
+        padding: 5px;
+        padding-left: 22px;
+    }
+    
+    .head .search i {
+        left: 22px;
+        font-size: 12px;
+    }
+    
+    .head .icons {
+        gap: 8px;
+    }
+    
+    .head .icons img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .head .notification i {
+        font-size: 14px;
+    }
+}
 /* End Head */
-/* Sart Main */
+/* Start Main */
 .main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 100%
+    width: 100%;
 }
 
 .main .title h1 {
     margin-bottom: 10px;
+    font-size: 28px;
 }
 
 .main .title h1::before {
@@ -216,9 +395,80 @@ ul {
     gap: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
     .main .content {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main {
+        gap: 18px;
+    }
+    
+    .main .title h1 {
+        font-size: 26px;
+    }
+    
+    .main .content {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        gap: 15px;
+    }
+    
+    .main .title h1 {
+        font-size: 24px;
+    }
+    
+    .main .title h1::before {
+        width: 120px;
+        height: 2px;
+    }
+    
+    .main .content {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        gap: 12px;
+    }
+    
+    .main .title h1 {
+        font-size: 22px;
+    }
+    
+    .main .content {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        gap: 10px;
+    }
+    
+    .main .title h1 {
+        font-size: 20px;
+    }
+    
+    .main .title h1::before {
+        width: 100px;
+        height: 2px;
+        bottom: -8px;
+    }
+    
+    .main .content {
+        gap: 10px;
     }
 }
 
@@ -3011,90 +3261,799 @@ ul {
     cursor: not-allowed;
 }
 
-@media (max-width: 767px) {
-    .friends-stats {
+/* End Friends Page */
+
+/* Start Files Page */
+.files-header {
+    margin-bottom: 20px;
+}
+
+.files-stats {
+    gap: 20px;
+}
+
+.storage-info h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.storage-bar {
+    width: 300px;
+    height: 8px;
+    background-color: #f1f5f9;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.storage-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #43c662, #ef9b25);
+    border-radius: 4px;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.storage-progress[data-usage="65%"] {
+    width: 65%;
+}
+
+.storage-progress::after {
+    content: attr(data-usage);
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    background-color: #333;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.storage-text {
+    color: #666;
+    font-size: 14px;
+}
+
+.files-actions {
+    gap: 15px;
+}
+
+.btn-upload,
+.btn-new-folder {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-upload {
+    background-color: #2878fc;
+    color: white;
+}
+
+.btn-upload:hover {
+    background-color: #1e5cc7;
+}
+
+.btn-new-folder {
+    background-color: #f1f5f9;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-new-folder:hover {
+    background-color: #e5e9f0;
+}
+
+/* Start Files Page */
+.files-header {
+    margin-bottom: 20px;
+}
+
+.files-stats {
+    gap: 20px;
+}
+
+.storage-info h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.storage-bar {
+    width: 300px;
+    height: 8px;
+    background-color: #f1f5f9;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.storage-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #43c662, #ef9b25);
+    border-radius: 4px;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.storage-progress[data-usage="65%"] {
+    width: 65%;
+}
+
+.storage-progress::after {
+    content: attr(data-usage);
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    background-color: #333;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.storage-text {
+    color: #666;
+    font-size: 14px;
+}
+
+.files-actions {
+    gap: 15px;
+}
+
+.btn-upload,
+.btn-new-folder {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-upload {
+    background-color: #2878fc;
+    color: white;
+}
+
+.btn-upload:hover {
+    background-color: #1e5cc7;
+}
+
+.btn-new-folder {
+    background-color: #f1f5f9;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-new-folder:hover {
+    background-color: #e5e9f0;
+}
+
+.files-navigation {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button responsive text hiding */
+.btn-upload span,
+.btn-new-folder span {
+    display: inline;
+}
+
+@media (max-width: 480px) {
+    .btn-upload span,
+    .btn-new-folder span {
+        display: none;
+    }
+    
+    .btn-upload,
+    .btn-new-folder {
+        min-width: 44px;
         justify-content: center;
-        gap: 20px;
+        padding: 12px;
+        gap: 0;
     }
-    
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .controls-content {
-        flex-direction: column;
-        align-items: center;
+}
+
+.breadcrumb {
+    gap: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.breadcrumb .current-folder {
+    color: #2878fc;
+    font-weight: 500;
+}
+
+.view-controls {
+    gap: 20px;
+}
+
+.view-toggle {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.view-btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-btn.active {
+    background-color: #2878fc;
+    color: white;
+}
+
+.view-btn:hover:not(.active) {
+    background-color: #e9ecef;
+}
+
+.sort-controls {
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.sort-select {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.quick-access {
+    margin-bottom: 20px;
+}
+
+.quick-access h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.quick-folders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.quick-folder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quick-folder:hover {
+    border-color: #2878fc;
+    background-color: #f8f9ff;
+}
+
+.quick-folder i {
+    font-size: 32px;
+}
+
+.quick-folder span {
+    font-weight: 500;
+    color: #333;
+}
+
+.quick-folder small {
+    color: #666;
+    font-size: 12px;
+}
+
+.recent-files {
+    margin-bottom: 20px;
+}
+
+.recent-files h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.files-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.file-item:hover {
+    border-color: #2878fc;
+    background-color: #f8f9ff;
+}
+
+.file-icon i {
+    font-size: 24px;
+}
+
+.file-info {
+    flex: 1;
+}
+
+.file-info h4 {
+    margin-bottom: 4px;
+    color: #333;
+    font-size: 14px;
+}
+
+.file-info p {
+    color: #666;
+    font-size: 12px;
+}
+
+.file-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #2878fc;
+    color: white;
+}
+
+.file-types {
+    margin-bottom: 20px;
+}
+
+.file-types h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.type-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.type-item {
+    padding: 10px 0;
+}
+
+.type-info {
+    gap: 12px;
+}
+
+.type-info i {
+    font-size: 18px;
+}
+
+.type-info span {
+    font-weight: 500;
+    color: #333;
+}
+
+.type-usage {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.type-usage .size {
+    font-weight: 500;
+    color: #666;
+    min-width: 60px;
+}
+
+.usage-bar {
+    width: 100px;
+    height: 6px;
+    background-color: #f1f5f9;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.usage-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.shared-files h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.shared-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.shared-item {
+    padding: 15px;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.shared-item:hover {
+    border-color: #2878fc;
+    background-color: #f8f9ff;
+}
+
+.shared-info {
+    gap: 15px;
+}
+
+.shared-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.shared-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shared-details h4 {
+    margin-bottom: 4px;
+    color: #333;
+    font-size: 14px;
+}
+
+.shared-details p {
+    color: #666;
+    font-size: 12px;
+}
+
+.shared-actions {
+    display: flex;
+    gap: 5px;
+}
+
+/* Responsive Design for Files Page */
+@media (max-width: 1200px) {
+    .files-stats {
         gap: 15px;
     }
     
-    .category-tabs {
+    .storage-bar {
+        width: 250px;
+    }
+    
+    .quick-folders {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    
+    .files-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .files-navigation {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .view-controls {
+        justify-content: space-between;
+    }
+    
+    .storage-bar {
+        width: 200px;
+    }
+    
+    .quick-folders {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+    }
+    
+    .files-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 12px;
+    }
+    
+    .type-stats {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .files-stats {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+    
+    .storage-info {
+        text-align: center;
+    }
+    
+    .storage-bar {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 8px;
+    }
+    
+    .files-actions {
+        gap: 10px;
         justify-content: center;
         flex-wrap: wrap;
     }
     
-    .friends-grid {
+    .btn-upload,
+    .btn-new-folder {
+        flex: 1;
+        min-width: 140px;
+        justify-content: center;
+        padding: 12px 16px;
+    }
+    
+    .quick-folders {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .quick-folder {
+        padding: 15px 10px;
+    }
+    
+    .files-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .friends-grid.list-view .friend-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .friend-stats {
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .request-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .request-actions {
-        justify-content: center;
-    }
-    
-    .suggestion-item {
-        flex-direction: column;
-        text-align: center;
         gap: 10px;
     }
     
-    .requests-list,
-    .suggestions-list {
+    .type-usage {
         gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .usage-bar {
+        width: 80px;
+        min-width: 80px;
+    }
+    
+    .sort-controls {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+    
+    .sort-select {
+        width: 100%;
     }
 }
 
-@media (max-width: 500px) {
-    .friend-card {
-        padding: 15px;
+@media (max-width: 600px) {
+    .files-header .files-stats {
+        gap: 15px;
     }
     
-    .friend-avatar {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .category-tab {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-    
-    .friend-stats {
+    .files-actions {
         flex-direction: column;
         gap: 8px;
     }
     
-    .friend-stats .stat {
-        flex-direction: row;
-        gap: 5px;
+    .btn-upload,
+    .btn-new-folder {
+        width: 100%;
+        flex: none;
+    }
+    
+    .quick-folders {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .quick-folder {
+        padding: 12px 8px;
+    }
+    
+    .quick-folder i {
+        font-size: 24px;
+    }
+    
+    .view-controls {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .view-toggle {
+        align-self: center;
     }
 }
-/* End Friends Page */
+
+@media (max-width: 500px) {
+    .file-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 12px;
+    }
+    
+    .file-info {
+        text-align: center;
+    }
+    
+    .file-actions {
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .shared-item {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 12px;
+    }
+    
+    .shared-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .shared-actions {
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .type-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 8px 0;
+    }
+    
+    .type-info {
+        justify-content: center;
+    }
+    
+    .type-usage {
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .usage-bar {
+        width: 120px;
+    }
+    
+    .quick-folders {
+        grid-template-columns: 1fr;
+    }
+    
+    .breadcrumb {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .files-header,
+    .files-navigation,
+    .quick-access,
+    .recent-files,
+    .file-types,
+    .shared-files {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .quick-folder span {
+        font-size: 14px;
+    }
+    
+    .quick-folder small {
+        font-size: 11px;
+    }
+    
+    .file-info h4 {
+        font-size: 13px;
+    }
+    
+    .file-info p {
+        font-size: 11px;
+    }
+    
+    .action-btn {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .storage-info h3 {
+        font-size: 16px;
+    }
+    
+    .storage-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 320px) {
+    .main {
+        padding: 10px;
+    }
+    
+    .files-header,
+    .files-navigation,
+    .quick-access,
+    .recent-files,
+    .file-types,
+    .shared-files {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .btn-upload,
+    .btn-new-folder {
+        padding: 8px 12px;
+        font-size: 12px;
+        min-width: 100px;
+    }
+    
+    .quick-folder {
+        padding: 10px 5px;
+    }
+    
+    .file-item {
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .shared-item {
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .type-item {
+        padding: 5px 0;
+    }
+}
+/* End Files Page */
